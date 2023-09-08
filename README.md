@@ -1,5 +1,5 @@
 # 📗 Table of Contents
-
+- [:List:Morse Code Decoder ](#-Awesome-a-nameabout-projecta)
 - [📖 About the Project](#about-project)
   - [🛠 Built With](#built-with)
     - [Tech Stack](#tech-stack)
