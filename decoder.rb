@@ -49,3 +49,14 @@ def decode_word(morse_word)
   decoded_word = morse_chars.map { |char| decode_char(char) }.join('')
   decoded_word
 end
+
+# Method to decode the entire message in Morse code
+def decode(message)
+  morse_words = message.split('   ')
+  decoded_message = morse_words.map { |word| decode_word(word) }.join(' ')
+  decoded_message
+end
+
+# Test the decoding with the provided message
+message = ".-   -... --- -..-   ..-. ..- .-.. .-..   --- ..-.   .-. ..- -... .. . ..."
+decoded_message = decode(message)
