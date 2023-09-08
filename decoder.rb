@@ -45,16 +45,12 @@ end
 
 # Method to decode an entire word in Morse code
 def decode_word(morse_word)
-  morse_chars = morse_word.split
-  decoded_word = morse_chars.map { |char| decode_char(char) }.join
-  decoded_word
+  morse_word.split.map { |char| decode_char(char) }.join
 end
 
 # Method to decode the entire message in Morse code
 def decode(message)
-  morse_words = message.split('   ')
-  decoded_message = morse_words.map { |word| decode_word(word) }.join(' ')
-  decoded_message
+  message.split('   ').map { |word| decode_word(word) }.join(' ')
 end
 
 # Test the decoding with the provided message
