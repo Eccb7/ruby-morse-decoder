@@ -36,7 +36,7 @@ MORSE_CODE = {
   '--...' => '7',
   '---..' => '8',
   '----.' => '9'
-}
+}.freeze
 
 # Method to decode a single Morse code character
 def decode_char(morse_char)
@@ -45,8 +45,8 @@ end
 
 # Method to decode an entire word in Morse code
 def decode_word(morse_word)
-  morse_chars = morse_word.split(' ')
-  decoded_word = morse_chars.map { |char| decode_char(char) }.join('')
+  morse_chars = morse_word.split
+  decoded_word = morse_chars.map { |char| decode_char(char) }.join
   decoded_word
 end
 
@@ -58,5 +58,6 @@ def decode(message)
 end
 
 # Test the decoding with the provided message
-message = ".-   -... --- -..-   ..-. ..- .-.. .-..   --- ..-.   .-. ..- -... .. . ..."
+message = '.-   -... --- -..-   ..-. ..- .-.. .-..   --- ..-.   .-. ..- -... .. . ...'
 decoded_message = decode(message)
+puts decoded_message
